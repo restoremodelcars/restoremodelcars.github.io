@@ -1,342 +1,403 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Restore Model Cars</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
-<style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-body{
-    background:#050505;
-    color:white;
-    font-family:'Poppins',sans-serif;
-    overflow-x:hidden;
-}
-
-/* ================= HERO ================= */
-
-.hero{
-    height:100vh;
-    background:
-    linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.85)),
-    url('background.jpg') center/cover no-repeat;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restore Model Cars - L'art de la miniature</title>
+    <!-- Intégration d'une police moderne (Google Sans / Montserrat) et des icônes FontAwesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    padding:20px;
-}
+    <style>
+        /* Styles Généraux & Modernes */
+        :root {
+            --primary-color: #e67e22; /* Orange mécanique / Restauration */
+            --dark-color: #1a1a1a;
+            --light-bg: #f9f9f9;
+            --text-color: #333333;
+        }
 
-.hero h1{
-    font-family:'Orbitron',sans-serif;
-    font-size:5rem;
-    letter-spacing:6px;
-    margin-bottom:20px;
-    color:#ffffff;
-}
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--text-color);
+            background-color: #ffffff;
+            line-height: 1.6;
+        }
 
-.hero p{
-    font-size:1.3rem;
-    color:#d0d0d0;
-    max-width:800px;
-    line-height:1.7;
-}
+        h1, h2, h3 {
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
 
-/* ================= NAVBAR ================= */
+        .container {
+            width: 85%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
-.navbar{
-    position:fixed;
-    top:0;
-    width:100%;
-    display:flex;
-    justify-content:center;
-    gap:40px;
-    padding:25px;
-    background:rgba(0,0,0,0.4);
-    backdrop-filter:blur(10px);
-    z-index:999;
-}
+        /* Barre de Navigation (Menu) */
+        header {
+            background-color: var(--dark-color);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
 
-.navbar a{
-    color:white;
-    text-decoration:none;
-    font-size:0.95rem;
-    letter-spacing:2px;
-    transition:0.3s;
-}
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-.navbar a:hover{
-    color:#d60000;
-}
+        .logo {
+            color: #ffffff;
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-decoration: none;
+        }
 
-/* ================= SECTION ================= */
+        .logo span {
+            color: var(--primary-color);
+        }
 
-.section{
-    padding:120px 10%;
-}
+        .nav-links {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
 
-.section-title{
-    font-family:'Orbitron',sans-serif;
-    font-size:2.5rem;
-    margin-bottom:20px;
-    color:white;
-}
+        .nav-links li {
+            margin-left: 25px;
+        }
 
-.section-text{
-    color:#bcbcbc;
-    line-height:1.8;
-    max-width:900px;
-    margin-bottom:60px;
-}
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
 
-/* ================= CARDS ================= */
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
 
-.cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:30px;
-}
+        .social-icons a {
+            color: #ffffff;
+            margin-left: 15px;
+            font-size: 1.2rem;
+            transition: transform 0.3s, color 0.3s;
+            display: inline-block;
+        }
 
-.card{
-    background:#101010;
-    border:1px solid #222;
-    overflow:hidden;
-    transition:0.4s;
-}
+        .social-icons a:hover {
+            transform: scale(1.2);
+        }
+        .social-icons .fa-facebook:hover { color: #1877f2; }
+        .social-icons .fa-youtube:hover { color: #ff0000; }
 
-.card:hover{
-    transform:translateY(-10px);
-    border-color:#d60000;
-}
+        /* Section Bannière (Hero) */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1594787318286-3d835c1d207f?auto=format&fit=crop&q=80&w=1920') no-repeat center center/cover;
+            height: 70vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #ffffff;
+        }
 
-.card img{
-    width:100%;
-    height:250px;
-    object-fit:cover;
-}
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
 
-.card-content{
-    padding:25px;
-}
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 30px auto;
+            font-weight: 300;
+        }
 
-.card-content h3{
-    margin-bottom:15px;
-    font-size:1.3rem;
-}
+        .btn {
+            background-color: var(--primary-color);
+            color: #ffffff;
+            padding: 12px 30px;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 4px;
+            transition: background 0.3s;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
 
-.card-content p{
-    color:#bdbdbd;
-    line-height:1.6;
-}
+        .btn:hover {
+            background-color: #d35400;
+        }
 
-/* ================= VIDEO SECTION ================= */
+        /* Section Nos Rubriques / Univers */
+        .rubriques-section {
+            padding: 80px 0;
+            background-color: #ffffff;
+        }
 
-.video-section{
-    position:relative;
-    height:70vh;
-    background:
-    linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.8)),
-    url('workshop.jpg') center/cover no-repeat;
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
 
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-}
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: var(--primary-color);
+            margin: 15px auto 0 auto;
+        }
 
-.video-content h2{
-    font-family:'Orbitron',sans-serif;
-    font-size:3rem;
-    margin-bottom:20px;
-}
+        .grid-rubriques {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
 
-.video-content p{
-    color:#d0d0d0;
-    max-width:700px;
-    line-height:1.8;
-}
+        .card {
+            background-color: var(--light-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+            text-align: center;
+        }
 
-/* ================= FOOTER ================= */
+        .card:hover {
+            transform: translateY(-10px);
+        }
 
-footer{
-    background:#000;
-    padding:50px 20px;
-    text-align:center;
-    border-top:1px solid #222;
-}
+        .card-img {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+        }
 
-footer h3{
-    font-family:'Orbitron',sans-serif;
-    margin-bottom:15px;
-}
+        .card h3 {
+            margin: 20px 0 10px 0;
+            font-size: 1.1rem;
+            padding: 0 15px;
+        }
 
-footer p{
-    color:#888;
-    margin-bottom:10px;
-}
+        .card p {
+            padding: 0 20px 20px 20px;
+            font-size: 0.9rem;
+            color: #666;
+        }
 
-.socials{
-    margin-top:20px;
-}
+        /* Section Qui Sommes-Nous */
+        .about-section {
+            padding: 80px 0;
+            background-color: var(--light-bg);
+        }
 
-.socials a{
-    color:white;
-    text-decoration:none;
-    margin:0 15px;
-    transition:0.3s;
-}
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
 
-.socials a:hover{
-    color:#d60000;
-}
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+        }
 
-/* ================= RESPONSIVE ================= */
+        .about-img {
+            flex: 1;
+            min-width: 300px;
+            height: 350px;
+            background: url('https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&q=80&w=800') no-repeat center center/cover;
+            border-radius: 8px;
+        }
 
-@media(max-width:768px){
+        /* Section Contact */
+        .contact-section {
+            padding: 80px 0;
+            background-color: #ffffff;
+        }
 
-.hero h1{
-    font-size:2.8rem;
-}
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
 
-.hero p{
-    font-size:1rem;
-}
+        .form-group {
+            margin-bottom: 20px;
+        }
 
-.navbar{
-    gap:20px;
-    padding:15px;
-    flex-wrap:wrap;
-}
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: 'Montserrat', sans-serif;
+            box-sizing: border-box;
+        }
 
-.section{
-    padding:80px 7%;
-}
+        .form-group textarea {
+            height: 150px;
+            resize: vertical;
+        }
 
-.video-content h2{
-    font-size:2rem;
-}
+        .contact-form .btn {
+            border: none;
+            width: 100%;
+            cursor: pointer;
+        }
 
-}
+        /* Pied de page (Footer) */
+        footer {
+            background-color: var(--dark-color);
+            color: #ffffff;
+            padding: 40px 0;
+            text-align: center;
+            font-size: 0.9rem;
+        }
 
-</style>
+        footer p {
+            margin: 0 0 20px 0;
+        }
+
+        /* Version Mobile */
+        @media (max-width: 768px) {
+            nav { flex-direction: column; }
+            .nav-links { margin: 20px 0; flex-wrap: wrap; justify-content: center; }
+            .nav-links li { margin: 5px 10px; }
+            .social-icons { margin-top: 10px; }
+            .hero h1 { font-size: 2rem; }
+        }
+    </style>
 </head>
-
 <body>
 
-<!-- NAVBAR -->
-
-<div class="navbar">
-    <a href="#">HOME</a>
-    <a href="#">RESTORATIONS</a>
-    <a href="#">DIORAMAS</a>
-    <a href="#">VIDEOS</a>
-    <a href="#">CONTACT</a>
-</div>
-
-<!-- HERO -->
-
-<section class="hero">
-
-    <h1>RESTORE MODEL CARS</h1>
-
-    <p>
-        Bringing iconic miniature cars back to life through detailed restorations,
-        automotive dioramas and motorsport passion.
-    </p>
-
-</section>
-
-<!-- RESTORATION -->
-
-<section class="section">
-
-    <h2 class="section-title">RESTORATION WORKSHOP</h2>
-
-    <p class="section-text">
-        Every miniature tells a story. Restore Model Cars restores legendary models
-        with precision, passion and attention to detail inspired by real motorsport workshops.
-    </p>
-
-    <div class="cards">
-
-        <div class="card">
-            <img src="ferrari.jpg">
-            <div class="card-content">
-                <h3>Ferrari Legends</h3>
-                <p>
-                    Restorations inspired by the greatest Ferrari racing cars in history.
-                </p>
+    <!-- Barre de Navigation -->
+    <header>
+        <div class="container nav">
+            <a href="#" class="logo">RESTORE <span>MODEL CARS</span></a>
+            <ul class="nav-links">
+                <li><a href="#">Accueil</a></li>
+                <li><a href="#rubriques">Nos Univers</a></li>
+                <li><a href="#about">Qui sommes-nous</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="social-icons">
+                <!-- REMPLACEZ LES # PAR VOS VRAIS LIENS FACEBOOK ET YOUTUBE -->
+                <a href="https://www.facebook.com/RestoreModelCars" target="_blank" title="Suivez-nous sur Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" target="_blank" title="Suivez-nous sur YouTube"><i class="fab fa-youtube"></i></a>
             </div>
         </div>
+    </header>
 
-        <div class="card">
-            <img src="lemans.jpg">
-            <div class="card-content">
-                <h3>Le Mans Collection</h3>
-                <p>
-                    Endurance legends recreated through immersive miniature projects.
-                </p>
+    <!-- Section Bannière Principale -->
+    <section class="hero">
+        <div class="container">
+            <h1>Donner une seconde vie aux miniatures</h1>
+            <p>De la rouille à l'éclat de la collection. Découvrez l'art méticuleux de la restauration et de la création de modèles réduits.</p>
+            <a href="#rubriques" class="btn">Découvrir mes projets</a>
+        </div>
+    </section>
+
+    <!-- Section Rubriques -->
+    <section id="rubriques" class="rubriques-section">
+        <div class="container">
+            <h2 class="section-title">Nos Spécialités</h2>
+            <div class="grid-rubriques">
+                
+                <!-- Rubrique 1 -->
+                <div class="card">
+                    <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&q=80&w=500');"></div>
+                    <h3>Restauration de Modèles Réduits</h3>
+                    <p>Décapage, traitement, peinture d'origine et sauvetage complet de véhicules anciens usés ou abîmés.</p>
+                </div>
+
+                <!-- Rubrique 2 -->
+                <div class="card">
+                    <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&q=80&w=500');"></div>
+                    <h3>Maquettes</h3>
+                    <p>Assemblage de kits de précision, détails minutieux et fidélité historique pour voitures, avions ou motos.</p>
+                </div>
+
+                <!-- Rubrique 3 -->
+                <div class="card">
+                    <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1569263979104-865ab7cd8d13?auto=format&fit=crop&q=80&w=500');"></div>
+                    <h3>Montage Modèles Grande Échelle</h3>
+                    <p>Travail rigoureux sur des pièces imposantes (1/8ème, 1/12ème) où chaque boulon et chaque câble comptent.</p>
+                </div>
+
+                <!-- Rubrique 4 -->
+                <div class="card">
+                    <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1601987177651-8edfe6c20009?auto=format&fit=crop&q=80&w=500');"></div>
+                    <h3>Dioramas</h3>
+                    <p>Création de décors réalistes (garages d'époque, granges abandonnées) pour mettre en scène vos miniatures.</p>
+                </div>
+
             </div>
         </div>
+    </section>
 
-        <div class="card">
-            <img src="atelier.jpg">
-            <div class="card-content">
-                <h3>Workshop Stories</h3>
-                <p>
-                    Follow complete restorations from damaged models to final cinematic display.
-                </p>
+    <!-- Section Qui Sommes-Nous -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 class="section-title">Qui Sommes-Nous</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>La Passion du Détail</h3>
+                    <p>Bienvenue dans l'atelier de <strong>Restore Model Cars</strong> ! Passionné depuis toujours par le monde du modélisme, j'ai ouvert cet espace pour partager ma passion de la résurrection d'objets miniatures.</p>
+                    <p>Ce qui n'était au départ qu'un passe-temps sur un coin de table est devenu un véritable savoir-faire. Chaque modèle confié ou trouvé est traité avec le plus grand respect des techniques de carrosserie, de peinture et de personnalisation, pour que la magie opère à nouveau.</p>
+                </div>
+                <div class="about-img"></div>
             </div>
         </div>
+    </section>
 
-    </div>
-
-</section>
-
-<!-- VIDEO SECTION -->
-
-<section class="video-section">
-
-    <div class="video-content">
-
-        <h2>IMMERSIVE AUTOMOTIVE CREATIONS</h2>
-
-        <p>
-            Dioramas, restorations and miniature automotive worlds inspired by
-            motorsport history and legendary racing machines.
-        </p>
-
-    </div>
-
-</section>
-
-<!-- FOOTER -->
-
-<footer>
-
-    <h3>RESTORE MODEL CARS</h3>
-
-    <p>
-        Miniature restoration • Dioramas • Motorsport Passion
-    </p>
-
-    <div class="socials">
-        <a href="#">YOUTUBE</a>
-        <a href="#">INSTAGRAM</a>
+    <!-- Section Contact -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Me Contacter</h2>
+            <div class="contact-form">
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Votre Nom" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Votre Adresse E-mail" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="subject" placeholder="Sujet de votre message">
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" placeholder="Décrivez votre projet (modèle, échelle, état...)" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Envoyer la demande</button>
+                </form>
             </div>
+        </div>
+    </section>
 
-</footer>
+    <!-- Pied de Page -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Restore Model Cars. Tous droits réservés.</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/RestoreModelCars" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
 
 </body>
 </html>
