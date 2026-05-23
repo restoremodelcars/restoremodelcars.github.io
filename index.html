@@ -11,7 +11,7 @@
     <style>
         /* Styles Généraux & Modernes */
         :root {
-            --primary-color: #e67e22; /* Orange mécanique / Restauration */
+            --primary-color: #dc2626; /* Rouge moderne / Restauration et Passion */
             --dark-color: #1a1a1a;
             --light-bg: #f9f9f9;
             --text-color: #333333;
@@ -41,7 +41,7 @@
         /* Barre de Navigation (Menu) */
         header {
             background-color: var(--dark-color);
-            padding: 20px 0;
+            padding: 15px 0; /* Un peu réduit pour s'adapter parfaitement au logo */
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -53,15 +53,17 @@
             align-items: center;
         }
 
-        .logo {
-            color: #ffffff;
-            font-size: 1.5rem;
-            font-weight: 700;
+        /* MODIFICATION : Style pour le Logo de l'en-tête */
+        .logo-container {
+            display: flex;
+            align-items: center;
             text-decoration: none;
         }
 
-        .logo span {
-            color: var(--primary-color);
+        .logo-img {
+            height: 50px; /* Ajuste la hauteur de votre logo */
+            width: auto;  /* Conserve les proportions de l'image */
+            display: block;
         }
 
         .nav-links {
@@ -101,9 +103,9 @@
         .social-icons .fa-facebook:hover { color: #1877f2; }
         .social-icons .fa-youtube:hover { color: #ff0000; }
 
-        /* Section Bannière (Hero) */
+        /* Section Bannière (Hero) - Pointant vers une image locale */
         .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://yt3.googleusercontent.com/l_YWZ4UKqZgPGPMhfh2Pq1bEARCNj3IuNa81__moOakn8JJrqfagKfaMpGpPIIa_jTSrDM5LDO8=w1707-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj') no-repeat center center/cover;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/banner.jpg') no-repeat center center/cover;
             height: 70vh;
             display: flex;
             justify-content: center;
@@ -137,7 +139,7 @@
         }
 
         .btn:hover {
-            background-color: #d35400;
+            background-color: #b91c1c;
         }
 
         /* Section Nos Rubriques / Univers */
@@ -198,7 +200,7 @@
             color: #666;
         }
 
-        /* Section Qui Sommes-Nous */
+        /* Section Qui Sommes-Nous - Pointant vers une image locale */
         .about-section {
             padding: 80px 0;
             background-color: var(--light-bg);
@@ -220,7 +222,7 @@
             flex: 1;
             min-width: 300px;
             height: 350px;
-            background: url('https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&q=80&w=800') no-repeat center center/cover;
+            background: url('images/about.jpg') no-repeat center center/cover;
             border-radius: 8px;
         }
 
@@ -287,7 +289,10 @@
     <!-- Barre de Navigation -->
     <header>
         <div class="container nav">
-            <a href="#" class="logo">RESTORE <span>MODEL CARS</span></a>
+            <!-- MODIFICATION : Intégration de l'image du logo en local -->
+            <a href="#" class="logo-container">
+                <img src="images/logo.png" alt="Restore Model Cars Logo" class="logo-img">
+            </a>
             <ul class="nav-links">
                 <li><a href="#">Accueil</a></li>
                 <li><a href="#rubriques">Nos Univers</a></li>
@@ -295,7 +300,6 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <div class="social-icons">
-                <!-- REMPLACEZ LES # PAR VOS VRAIS LIENS FACEBOOK ET YOUTUBE -->
                 <a href="https://www.facebook.com/RestoreModelCars" target="_blank" title="Suivez-nous sur Facebook"><i class="fab fa-facebook-f"></i></a>
                 <a href="#" target="_blank" title="Suivez-nous sur YouTube"><i class="fab fa-youtube"></i></a>
             </div>
@@ -319,28 +323,28 @@
                 
                 <!-- Rubrique 1 -->
                 <div class="card">
-                    <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&q=80&w=500');"></div>
+                    <div class="card-img" style="background-image: url('images/restauration.jpg');"></div>
                     <h3>Restauration de Modèles Réduits</h3>
                     <p>Décapage, traitement, peinture d'origine et sauvetage complet de véhicules anciens usés ou abîmés.</p>
                 </div>
 
                 <!-- Rubrique 2 -->
                 <div class="card">
-                    <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&q=80&w=500');"></div>
+                    <div class="card-img" style="background-image: url('images/maquettes.jpg');"></div>
                     <h3>Maquettes</h3>
                     <p>Assemblage de kits de précision, détails minutieux et fidélité historique pour voitures, avions ou motos.</p>
                 </div>
 
                 <!-- Rubrique 3 -->
                 <div class="card">
-                    <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1569263979104-865ab7cd8d13?auto=format&fit=crop&q=80&w=500');"></div>
+                    <div class="card-img" style="background-image: url('images/grande_echelle.jpg');"></div>
                     <h3>Montage Modèles Grande Échelle</h3>
                     <p>Travail rigoureux sur des pièces imposantes (1/8ème, 1/12ème) où chaque boulon et chaque câble comptent.</p>
                 </div>
 
                 <!-- Rubrique 4 -->
                 <div class="card">
-                    <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1601987177651-8edfe6c20009?auto=format&fit=crop&q=80&w=500');"></div>
+                    <div class="card-img" style="background-image: url('images/dioramas.jpg');"></div>
                     <h3>Dioramas</h3>
                     <p>Création de décors réalistes (garages d'époque, granges abandonnées) pour mettre en scène vos miniatures.</p>
                 </div>
