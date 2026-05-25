@@ -9,6 +9,8 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 <style>
 
 /* ================= RESET ================= */
@@ -24,19 +26,6 @@ body {
     color: #111;
 }
 
-/* ================= HEADER ================= */
-header {
-    background: #0d0d0d;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-    border-bottom: 3px solid #dc2626;
-}
-
-header h1 {
-    font-size: 2rem;
-}
-
 /* ================= CONTAINER ================= */
 .container {
     width: 90%;
@@ -44,9 +33,140 @@ header h1 {
     margin: auto;
 }
 
-/* ================= SECTION ================= */
+/* ================= HEADER ================= */
+
+header {
+    background: #0d0d0d;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid #dc2626;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+/* LOGO */
+.logo img {
+    height: 85px;
+}
+
+/* MENU */
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    position: relative;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #dc2626;
+}
+
+.menu a::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #dc2626;
+    transition: 0.3s;
+}
+
+.menu a:hover::after {
+    width: 100%;
+}
+
+/* SOCIAL */
+.social {
+    display: flex;
+    gap: 15px;
+}
+
+.social a {
+    color: white;
+    font-size: 1.2rem;
+    transition: 0.3s;
+}
+
+.social a:hover {
+    transform: scale(1.2);
+}
+
+.fa-facebook-f:hover { color: #1877f2; }
+.fa-youtube:hover { color: #ff0000; }
+
+/* ================= HERO ================= */
+
+.hero {
+    height: 35vh;
+
+    background:
+        linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)),
+        url("fantome_250gto.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    color: white;
+    border-bottom: 4px solid #dc2626;
+}
+
+.hero h1 {
+    font-size: 3.2rem;
+}
+
+.hero p {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0.9;
+}
+
+/* BUTTON */
+.btn {
+    margin-top: 30px;
+    display: inline-block;
+    padding: 12px 32px;
+    background: #dc2626;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 6px;
+    transition: 0.3s;
+    align-items: center;
+}
+
+.btn:hover {
+    background: #a31212;
+}
+
+/* ================= SECTIONS ================= */
+
 .section {
-    padding: 80px 0;
+    padding: 90px 0;
 }
 
 .title {
@@ -58,118 +178,182 @@ header h1 {
 .title::after {
     content: "";
     display: block;
-    width: 60px;
+    width: 70px;
     height: 3px;
     background: #dc2626;
-    margin: 12px auto;
+    margin: 15px auto;
 }
 
-/* ================= PROJECT ================= */
-.project {
-    margin-bottom: 80px;
-}
-
-.project h3 {
-    text-align: center;
-    font-size: 1.6rem;
-    margin-bottom: 10px;
-}
-
-.project p {
-    text-align: center;
-    color: #666;
-    margin-bottom: 25px;
-}
-
-/* ================= GALLERY ================= */
-.gallery {
+/* GRID */
+.grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
 }
 
-.gallery img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 10px;
+/* CARD */
+.card {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    padding: 25px;
+    text-align: center;
     transition: 0.3s;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.05);
 }
 
-.gallery img:hover {
-    transform: scale(1.04);
+.card:hover {
+    transform: translateY(-8px);
+    border-color: #dc2626;
 }
 
-/* ================= FOOTER ================= */
+/* CONTACT */
+form {
+    max-width: 650px;
+    margin: auto;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+input:focus, textarea:focus {
+    border-color: #dc2626;
+    outline: none;
+}
+
+/* FOOTER */
 footer {
     background: #0d0d0d;
     color: white;
     text-align: center;
     padding: 30px 0;
-    border-top: 3px solid #dc2626;
+    border-top: 2px solid #dc2626;
 }
 
-</style>
+/* RESPONSIVE */
+@media (max-width: 768px) {
 
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .menu {
+        gap: 15px;
+    }
+
+}
+</style>
 </head>
 
 <body>
 
+<!-- HEADER -->
 <header>
-    <h1>Restore Model Cars</h1>
-</header>
+<div class="container nav">
 
-<section class="section">
-
-<div class="container">
-
-    <h2 class="title">Restaurations</h2>
-
-    <!-- ================= PROJET 1 ================= -->
-    <div class="project">
-        <h3>Ferrari 250 GTO</h3>
-        <p>Restauration complète - état concours</p>
-
-        <div class="gallery">
-            <img src="img/ferrari1.jpg" alt="">
-            <img src="img/ferrari2.jpg" alt="">
-            <img src="img/ferrari3.jpg" alt="">
-            <img src="img/ferrari4.jpg" alt="">
-        </div>
+    <div class="logo">
+        <img src="new_logo_rmc.png" alt="Logo Restore Model Cars">
     </div>
 
-    <!-- ================= PROJET 2 ================= -->
-    <div class="project">
-        <h3>Porsche 911 Classic</h3>
-        <p>Remise à neuf détaillée</p>
+    <ul class="menu">
+        <li><a href="#">Accueil</a></li>
+        <li><a href="#restauration">Restaurations</a></li>
+        <li><a href="#dioramas">Dioramas</a></li>
+        <li><a href="#maquettes">Maquettes</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
 
-        <div class="gallery">
-            <img src="img/porsche1.jpg" alt="">
-            <img src="img/porsche2.jpg" alt="">
-            <img src="img/porsche3.jpg" alt="">
-        </div>
-    </div>
-
-    <!-- ================= PROJET 3 ================= -->
-    <div class="project">
-        <h3>Mercedes 300 SL</h3>
-        <p>Restauration carrosserie + intérieur</p>
-
-        <div class="gallery">
-            <img src="img/mercedes1.jpg" alt="">
-            <img src="img/mercedes2.jpg" alt="">
-            <img src="img/mercedes3.jpg" alt="">
-            <img src="img/mercedes4.jpg" alt="">
-        </div>
+    <div class="social">
+        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
     </div>
 
 </div>
+</header>
 
+<!-- HERO -->
+<section class="hero">
+<div>
+    <h1>Restore Model Cars</h1>
+    <p>Donner une seconde vie aux miniatures automobiles</p>
+    <a href="#restauration" class="btn">Découvrir</a>
+</div>
 </section>
 
+<!-- RESTAURATION -->
+<section id="restauration" class="section">
+<div class="container">
+    <h2 class="title">Restaurations</h2>
+
+    <div class="grid">
+        <div class="card">
+            <h3>Restauration complète</h3>
+            <p>Remise à neuf de modèles anciens et rares.</p>
+        </div>
+
+        <div class="card">
+            <h3>Amélioration</h3>
+            <p>Détails précis et rendu réaliste.</p>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- DIORAMAS -->
+<section id="dioramas" class="section">
+<div class="container">
+    <h2 class="title">Dioramas</h2>
+
+    <div class="grid">
+        <div class="card">
+            <h3>Scènes réalistes</h3>
+            <p>Mise en scène de véhicules miniatures.</p>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- MAQUETTES -->
+<section id="maquettes" class="section">
+<div class="container">
+    <h2 class="title">Maquettes</h2>
+
+    <div class="grid">
+        <div class="card">
+            <h3>Assemblage précis</h3>
+            <p>Travail détaillé et fidèle.</p>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section">
+<div class="container">
+    <h2 class="title">Contact</h2>
+
+    <form>
+        <input type="text" placeholder="Nom">
+        <input type="email" placeholder="Email">
+        <textarea placeholder="Votre message"></textarea>
+        <button class="btn">Envoyer</button>
+    </form>
+</div>
+</section>
+
+<!-- FOOTER -->
 <footer>
-    <p>© 2026 Restore Model Cars</p>
+<p>© 2026 Restore Model Cars</p>
+
+<div class="social">
+    <a href="#"><i class="fab fa-facebook-f"></i></a>
+    <a href="#"><i class="fab fa-youtube"></i></a>
+</div>
 </footer>
 
 </body>
