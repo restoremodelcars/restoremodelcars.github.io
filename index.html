@@ -97,25 +97,58 @@ header img {
 }
     
 /* CONTACT */
-form {
-    max-width: 650px;
+.contact {
+    background: #f7f7f7;
+    padding: 80px 0;
+    margin-top: 80px;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.contact p {
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.contact form {
+    max-width: 600px;
     margin: auto;
 }
 
-input, textarea {
+.contact input,
+.contact textarea {
     width: 100%;
     padding: 14px;
     margin-bottom: 15px;
     border: 1px solid #ddd;
-    border-radius: 6px;
+    border-radius: 8px;
+    font-family: inherit;
 }
 
-input:focus, textarea:focus {
+.contact input:focus,
+.contact textarea:focus {
     border-color: #dc2626;
     outline: none;
 }
 
+.contact button {
+    padding: 12px 30px;
+    background: #dc2626;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: 600;
+}
 
+.contact button:hover {
+    background: #a31212;
+}
 /* FOOTER */
 footer {
     background: #0d0d0d;
@@ -174,18 +207,22 @@ footer {
     </div>
 
 </div>
-    <!-- CONTACT -->
-<section id="contact" class="section">
-<div class="container">
-    <h2 class="title">Contact</h2>
+<!-- CONTACT -->
+<section class="contact">
+    <div class="container">
 
-    <form>
-        <input type="text" placeholder="Nom">
-        <input type="email" placeholder="Email">
-        <textarea placeholder="Votre message"></textarea>
-        <button class="btn">Envoyer</button>
-    </form>
-</div>
+        <h2>Contact</h2>
+        <p>Une question ou un projet ? Contactez-nous directement.</p>
+
+        <form>
+            <input type="text" placeholder="Nom" required>
+            <input type="email" placeholder="Email" required>
+            <textarea placeholder="Votre message" rows="5" required></textarea>
+
+            <button type="submit">Envoyer</button>
+        </form>
+
+    </div>
 </section>
 
 <!-- FOOTER -->
