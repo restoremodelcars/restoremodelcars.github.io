@@ -1,3 +1,16 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Restore Model Cars</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 <style>
 
 /* ================= RESET ================= */
@@ -9,7 +22,7 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
-    background: #ffffff;
+    background: #fff;
     color: #111;
 }
 
@@ -56,20 +69,19 @@ header {
     color: white;
     text-decoration: none;
     font-weight: 600;
-    transition: 0.3s;
     position: relative;
+    transition: 0.3s;
 }
 
 .menu a:hover {
     color: #dc2626;
 }
 
-/* underline animation */
 .menu a::after {
     content: "";
     position: absolute;
-    left: 0;
     bottom: -5px;
+    left: 0;
     width: 0%;
     height: 2px;
     background: #dc2626;
@@ -122,13 +134,14 @@ header {
 
 .hero h1 {
     font-size: 3.2rem;
-    font-weight: 700;
 }
 
 .hero p {
     margin-top: 20px;
     font-size: 1.2rem;
     max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
     opacity: 0.9;
 }
 
@@ -179,7 +192,7 @@ header {
 
 /* CARD */
 .card {
-    background: #ffffff;
+    background: #fff;
     border: 1px solid #eee;
     border-radius: 12px;
     padding: 25px;
@@ -234,3 +247,113 @@ footer {
 
 }
 </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+<div class="container nav">
+
+    <div class="logo">
+        <img src="new_logo_rmc.png" alt="Logo Restore Model Cars">
+    </div>
+
+    <ul class="menu">
+        <li><a href="#">Accueil</a></li>
+        <li><a href="#restauration">Restaurations</a></li>
+        <li><a href="#dioramas">Dioramas</a></li>
+        <li><a href="#maquettes">Maquettes</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <div class="social">
+        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+    </div>
+
+</div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+<div>
+    <h1>Restore Model Cars</h1>
+    <p>Donner une seconde vie aux miniatures automobiles</p>
+    <a href="#restauration" class="btn">Découvrir</a>
+</div>
+</section>
+
+<!-- RESTAURATION -->
+<section id="restauration" class="section">
+<div class="container">
+    <h2 class="title">Restaurations</h2>
+
+    <div class="grid">
+        <div class="card">
+            <h3>Restauration complète</h3>
+            <p>Remise à neuf de modèles anciens et rares.</p>
+        </div>
+
+        <div class="card">
+            <h3>Peinture & finition</h3>
+            <p>Détails précis et rendu réaliste.</p>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- DIORAMAS -->
+<section id="dioramas" class="section">
+<div class="container">
+    <h2 class="title">Dioramas</h2>
+
+    <div class="grid">
+        <div class="card">
+            <h3>Scènes réalistes</h3>
+            <p>Mise en scène de véhicules miniatures.</p>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- MAQUETTES -->
+<section id="maquettes" class="section">
+<div class="container">
+    <h2 class="title">Maquettes</h2>
+
+    <div class="grid">
+        <div class="card">
+            <h3>Assemblage précis</h3>
+            <p>Travail détaillé et fidèle.</p>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section">
+<div class="container">
+    <h2 class="title">Contact</h2>
+
+    <form>
+        <input type="text" placeholder="Nom">
+        <input type="email" placeholder="Email">
+        <textarea placeholder="Votre message"></textarea>
+        <button class="btn">Envoyer</button>
+    </form>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+<p>© 2026 Restore Model Cars</p>
+
+<div class="social">
+    <a href="#"><i class="fab fa-facebook-f"></i></a>
+    <a href="#"><i class="fab fa-youtube"></i></a>
+</div>
+</footer>
+
+</body>
+</html>
