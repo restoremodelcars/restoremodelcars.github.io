@@ -95,6 +95,26 @@ header img {
     transform: translateY(-8px);
     border-color: #dc2626;
 }
+    
+/* CONTACT */
+form {
+    max-width: 650px;
+    margin: auto;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+input:focus, textarea:focus {
+    border-color: #dc2626;
+    outline: none;
+}
+
 
 /* FOOTER */
 footer {
@@ -132,15 +152,8 @@ footer {
 
         <a href="restauration.html" class="card-link">
             <div class="card">
-                <h2>Restaurations</h2>
-                <p>Modèles restaurés entièrement</p>
-            </div>
-        </a>
-
-        <a href="amelioration.html" class="card-link">
-            <div class="card">
-                <h2>Améliorations</h2>
-                <p>Détails et modifications réalistes</p>
+                <h2>Restaurations/Améliorations</h2>
+                <p>Modèles restaurés, améliorés,détaillés entièrement</p>
             </div>
         </a>
 
@@ -154,13 +167,26 @@ footer {
         <a href="maquettes.html" class="card-link">
             <div class="card">
                 <h2>Maquettes</h2>
-                <p>Assemblage et création</p>
+                <p>Assemblage à toutes échelles</p>
             </div>
         </a>
 
     </div>
 
 </div>
+    <!-- CONTACT -->
+<section id="contact" class="section">
+<div class="container">
+    <h2 class="title">Contact</h2>
+
+    <form>
+        <input type="text" placeholder="Nom">
+        <input type="email" placeholder="Email">
+        <textarea placeholder="Votre message"></textarea>
+        <button class="btn">Envoyer</button>
+    </form>
+</div>
+</section>
 
 <!-- FOOTER -->
 <footer>
