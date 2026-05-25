@@ -8,7 +8,6 @@
 <title>Restore Model Cars</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
-
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <style>
@@ -34,7 +33,6 @@ body {
 }
 
 /* ================= HEADER ================= */
-
 header {
     background: #0d0d0d;
     padding: 15px 0;
@@ -51,12 +49,10 @@ header {
     gap: 15px;
 }
 
-/* LOGO */
 .logo img {
     height: 85px;
 }
 
-/* MENU */
 .menu {
     display: flex;
     list-style: none;
@@ -69,27 +65,11 @@ header {
     color: white;
     text-decoration: none;
     font-weight: 600;
-    position: relative;
     transition: 0.3s;
 }
 
 .menu a:hover {
     color: #dc2626;
-}
-
-.menu a::after {
-    content: "";
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 0%;
-    height: 2px;
-    background: #dc2626;
-    transition: 0.3s;
-}
-
-.menu a:hover::after {
-    width: 100%;
 }
 
 /* SOCIAL */
@@ -101,62 +81,42 @@ header {
 .social a {
     color: white;
     font-size: 1.2rem;
-    transition: 0.3s;
 }
-
-.social a:hover {
-    transform: scale(1.2);
-}
-
-.fa-facebook-f:hover { color: #1877f2; }
-.fa-youtube:hover { color: #ff0000; }
 
 /* ================= HERO ================= */
-
 .hero {
-    height: 35vh;
-
+    height: 40vh;
     background:
-        linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)),
+        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
         url("fantome_250gto.jpg");
-
     background-size: cover;
     background-position: center;
-
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-
     color: white;
     border-bottom: 4px solid #dc2626;
 }
 
 .hero h1 {
-    font-size: 3.2rem;
+    font-size: 3rem;
 }
 
 .hero p {
-    margin-top: 20px;
-    font-size: 1.2rem;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-top: 15px;
     opacity: 0.9;
 }
 
-/* BUTTON */
 .btn {
-    margin-top: 30px;
+    margin-top: 25px;
     display: inline-block;
-    padding: 12px 32px;
+    padding: 12px 30px;
     background: #dc2626;
     color: white;
     text-decoration: none;
-    font-weight: 600;
     border-radius: 6px;
     transition: 0.3s;
-    align-items: center;
 }
 
 .btn:hover {
@@ -164,54 +124,64 @@ header {
 }
 
 /* ================= SECTIONS ================= */
-
 .section {
-    padding: 90px 0;
-    scroll-margin-top: 120px;
-
+    padding: 80px 0;
 }
 
 .title {
     text-align: center;
     font-size: 2rem;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 }
 
 .title::after {
     content: "";
     display: block;
-    width: 70px;
+    width: 60px;
     height: 3px;
     background: #dc2626;
-    margin: 15px auto;
+    margin: 12px auto;
 }
 
 /* GRID */
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
 }
 
 /* CARD */
 .card {
     background: #fff;
-    border: 1px solid #eee;
     border-radius: 12px;
-    padding: 25px;
-    text-align: center;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
     transition: 0.3s;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+    text-align: center;
 }
 
 .card:hover {
-    transform: translateY(-8px);
-    border-color: #dc2626;
+    transform: translateY(-6px);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card h3 {
+    margin-top: 15px;
+}
+
+.card p {
+    padding: 10px 15px 20px;
+    color: #555;
 }
 
 /* CONTACT */
 form {
-    max-width: 650px;
+    max-width: 600px;
     margin: auto;
 }
 
@@ -237,18 +207,11 @@ footer {
     border-top: 2px solid #dc2626;
 }
 
-/* RESPONSIVE */
 @media (max-width: 768px) {
-
-    .hero h1 {
-        font-size: 2.2rem;
-    }
-
-    .menu {
-        gap: 15px;
-    }
-
+    .hero h1 { font-size: 2rem; }
+    .menu { gap: 15px; }
 }
+
 </style>
 </head>
 
@@ -259,20 +222,20 @@ footer {
 <div class="container nav">
 
     <div class="logo">
-        <img src="new_logo_rmc.png" alt="Logo Restore Model Cars">
+        <img src="new_logo_rmc.png" alt="logo">
     </div>
 
     <ul class="menu">
-        <li><a href="#">Accueil</a></li>
         <li><a href="#restauration">Restaurations</a></li>
+        <li><a href="#amelioration">Améliorations</a></li>
         <li><a href="#dioramas">Dioramas</a></li>
         <li><a href="#maquettes">Maquettes</a></li>
         <li><a href="#contact">Contact</a></li>
     </ul>
 
     <div class="social">
-        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
     </div>
 
 </div>
@@ -290,72 +253,98 @@ footer {
 <!-- RESTAURATION -->
 <section id="restauration" class="section">
 <div class="container">
-    <h2 class="title">Restaurations</h2>
+<h2 class="title">Restaurations</h2>
 
-    <div class="grid">
-        <div class="card">
-            <h3>Restauration complète</h3>
-            <p>Remise à neuf de modèles anciens et rares.</p>
-        </div>
+<div class="grid">
 
-        <div class="card">
-            <h3>Amélioration</h3>
-            <p>Détails précis et rendu réaliste.</p>
-        </div>
+    <div class="card">
+        <img src="img/resto1.jpg">
+        <h3>Ferrari 250 GTO</h3>
+        <p>Restauration complète</p>
     </div>
+
+    <div class="card">
+        <img src="img/resto2.jpg">
+        <h3>Porsche 911</h3>
+        <p>Remise à neuf détaillée</p>
+    </div>
+
+</div>
+</div>
+</section>
+
+<!-- AMELIORATION -->
+<section id="amelioration" class="section">
+<div class="container">
+<h2 class="title">Améliorations</h2>
+
+<div class="grid">
+
+    <div class="card">
+        <img src="img/ameli1.jpg">
+        <h3>Détails moteurs</h3>
+        <p>Ajout de pièces réalistes</p>
+    </div>
+
+</div>
+
 </div>
 </section>
 
 <!-- DIORAMAS -->
 <section id="dioramas" class="section">
 <div class="container">
-    <h2 class="title">Dioramas</h2>
+<h2 class="title">Dioramas</h2>
 
-    <div class="grid">
-        <div class="card">
-            <h3>Scènes réalistes</h3>
-            <p>Mise en scène de véhicules miniatures.</p>
-        </div>
+<div class="grid">
+
+    <div class="card">
+        <img src="img/diorama1.jpg">
+        <h3>Garage vintage</h3>
+        <p>Scène réaliste miniature</p>
     </div>
+
+</div>
+
 </div>
 </section>
 
 <!-- MAQUETTES -->
 <section id="maquettes" class="section">
 <div class="container">
-    <h2 class="title">Maquettes</h2>
+<h2 class="title">Maquettes</h2>
 
-    <div class="grid">
-        <div class="card">
-            <h3>Assemblage précis</h3>
-            <p>Travail détaillé et fidèle.</p>
-        </div>
+<div class="grid">
+
+    <div class="card">
+        <img src="img/maquette1.jpg">
+        <h3>Assemblage précis</h3>
+        <p>Travail fidèle et détaillé</p>
     </div>
+
+</div>
+
 </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact" class="section">
 <div class="container">
-    <h2 class="title">Contact</h2>
+<h2 class="title">Contact</h2>
 
-    <form>
-        <input type="text" placeholder="Nom">
-        <input type="email" placeholder="Email">
-        <textarea placeholder="Votre message"></textarea>
-        <button class="btn">Envoyer</button>
-    </form>
+<form>
+    <input type="text" placeholder="Nom">
+    <input type="email" placeholder="Email">
+    <textarea placeholder="Votre message"></textarea>
+    <button class="btn" type="submit">Envoyer</button>
+</form>
+
 </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
 <p>© 2026 Restore Model Cars</p>
-
-<div class="social">
-    <a href="#"><i class="fab fa-facebook-f"></i></a>
-    <a href="#"><i class="fab fa-youtube"></i></a>
-</div>
 </footer>
 
 </body>
