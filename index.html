@@ -11,7 +11,7 @@
 
 <style>
 
-/* ================= RESET ================= */
+/* RESET */
 * {
     margin: 0;
     padding: 0;
@@ -24,38 +24,50 @@ body {
     color: #111;
 }
 
-/* ================= HEADER ================= */
+/* ================= HEADER LOGO ================= */
 header {
     background: #0d0d0d;
-    color: white;
+    padding: 15px 0;
     text-align: center;
-    padding: 25px 0;
     border-bottom: 3px solid #dc2626;
 }
 
-/* ================= CONTAINER ================= */
+header img {
+    height: 80px;
+}
+
+/* ================= HERO BANNER ================= */
+.hero {
+    height: 45vh;
+    background:
+        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+        url("fantome_250gto.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 3rem;
+}
+
+.hero p {
+    margin-top: 10px;
+    opacity: 0.9;
+}
+
+/* CONTAINER */
 .container {
     width: 90%;
     max-width: 1100px;
     margin: auto;
 }
 
-/* ================= HERO ================= */
-.hero {
-    text-align: center;
-    padding: 80px 20px;
-}
-
-.hero h1 {
-    font-size: 2.5rem;
-}
-
-.hero p {
-    margin-top: 10px;
-    color: #555;
-}
-
-/* ================= SECTION GRID ================= */
+/* GRID */
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -63,7 +75,7 @@ header {
     margin-top: 50px;
 }
 
-/* ================= CLICKABLE CARD ================= */
+/* CARD */
 .card-link {
     text-decoration: none;
     color: inherit;
@@ -84,7 +96,7 @@ header {
     border-color: #dc2626;
 }
 
-/* ================= FOOTER ================= */
+/* FOOTER */
 footer {
     background: #0d0d0d;
     color: white;
@@ -100,18 +112,22 @@ footer {
 
 <body>
 
+<!-- HEADER LOGO -->
 <header>
-    <h1>Restore Model Cars</h1>
+    <img src="new_logo_rmc.png" alt="Restore Model Cars Logo">
 </header>
 
+<!-- HERO BANNIÈRE -->
+<section class="hero">
+    <div>
+        <h1>Restore Model Cars</h1>
+        <p>Donner une seconde vie aux miniatures automobiles</p>
+    </div>
+</section>
+
+<!-- CONTENU -->
 <div class="container">
 
-    <div class="hero">
-        <h1>Bienvenue</h1>
-        <p>Découvrez mes restaurations, améliorations et dioramas de miniatures automobiles</p>
-    </div>
-
-    <!-- ================= SECTIONS CLIQUABLES ================= -->
     <div class="grid">
 
         <a href="restauration.html" class="card-link">
@@ -146,6 +162,7 @@ footer {
 
 </div>
 
+<!-- FOOTER -->
 <footer>
     <p>© 2026 Restore Model Cars</p>
 </footer>
