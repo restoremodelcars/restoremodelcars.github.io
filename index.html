@@ -212,15 +212,16 @@ footer {
     <div class="container">
 
         <h2>Contact</h2>
-        <p>Une question ou un projet ? Contactez-nous directement.</p>
+        <p>Une question ? Contactez-nous directement.</p>
 
-        <form>
-            <input type="text" placeholder="Nom" required>
-            <input type="email" placeholder="Email" required>
-            <textarea placeholder="Votre message" rows="5" required></textarea>
+        <form action="https://formspree.io/f/xdajbrga" method="POST">
+    <input type="text" name="nom" placeholder="Nom" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <input type="text" name="_gotcha" style="display:none">
+    <textarea name="message" placeholder="Votre message" rows="5" required></textarea>
+    <button type="submit">Envoyer</button>
 
-            <button type="submit">Envoyer</button>
-        </form>
+</form>
 
     </div>
 </section>
