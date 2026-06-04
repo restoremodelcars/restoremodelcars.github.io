@@ -1,0 +1,424 @@
+```html
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Travaux du Moment - Restore Model Cars</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Montserrat',sans-serif;
+    background:#fff;
+    color:#111;
+}
+
+/* HEADER */
+
+header{
+    background:#0d0d0d;
+    padding:15px 0;
+    text-align:center;
+    border-bottom:3px solid #dc2626;
+}
+
+header img{
+    height:80px;
+}
+
+/* HERO */
+
+.hero{
+    height:35vh;
+    background:
+    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+    url("travaux-hero.jpg");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+}
+
+.hero h1{
+    font-size:3rem;
+}
+
+.hero p{
+    margin-top:10px;
+}
+
+.back-home{
+    display:inline-block;
+    margin-top:25px;
+    padding:12px 24px;
+    background:#dc2626;
+    color:white;
+    text-decoration:none;
+    border-radius:6px;
+}
+
+.back-home:hover{
+    background:#a31212;
+}
+
+/* CONTAINER */
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+.section{
+    padding:80px 0;
+}
+
+/* BLOCS */
+
+.work-block{
+    margin-bottom:80px;
+}
+
+.work-block h2{
+    text-align:center;
+    margin-bottom:15px;
+    font-size:2rem;
+}
+
+.work-block p{
+    text-align:center;
+    color:#666;
+    margin-bottom:30px;
+}
+
+/* COMPARATEUR */
+
+.compare-container{
+
+    position:relative;
+
+    width:100%;
+    height:70vh;
+
+    min-height:450px;
+    max-height:850px;
+
+    overflow:hidden;
+
+    border-radius:14px;
+
+    background:white;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.15);
+}
+
+.compare-container img{
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    object-fit:contain;
+
+    user-select:none;
+    pointer-events:none;
+}
+
+.compare-after{
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:50%;
+    height:100%;
+
+    overflow:hidden;
+}
+
+.compare-slider{
+
+    position:absolute;
+
+    top:0;
+
+    left:50%;
+
+    width:4px;
+
+    height:100%;
+
+    background:#dc2626;
+
+    transform:translateX(-50%);
+
+    cursor:ew-resize;
+
+    z-index:10;
+}
+
+.compare-slider::before{
+
+    content:"↔";
+
+    position:absolute;
+
+    top:50%;
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    width:50px;
+    height:50px;
+
+    border-radius:50%;
+
+    background:#dc2626;
+
+    color:white;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    font-size:22px;
+    font-weight:bold;
+}
+
+/* FOOTER */
+
+footer{
+    background:#0d0d0d;
+    color:white;
+    text-align:center;
+    padding:30px;
+    border-top:3px solid #dc2626;
+}
+
+@media(max-width:768px){
+
+    .hero h1{
+        font-size:2rem;
+    }
+
+    .compare-container{
+        height:350px;
+        min-height:auto;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <img src="new_logo_rmc.png" alt="Restore Model Cars">
+</header>
+
+<section class="hero">
+
+    <div>
+
+        <h1>Travaux du Moment</h1>
+
+        <p>Suivez l'avancement des restaurations en cours</p>
+
+        <a href="index.html" class="back-home">
+            Retour accueil
+        </a>
+
+    </div>
+
+</section>
+
+<section class="section">
+
+<div class="container">
+
+    <!-- FACE -->
+
+    <div class="work-block">
+
+        <h2>Face</h2>
+
+        <p>Comparaison avant / après restauration.</p>
+
+        <div class="compare-container">
+
+            <img src="face-avant.jpg">
+
+            <div class="compare-after">
+                <img src="face-apres.jpg">
+            </div>
+
+            <div class="compare-slider"></div>
+
+        </div>
+
+    </div>
+
+    <!-- DESSUS -->
+
+    <div class="work-block">
+
+        <h2>Dessus</h2>
+
+        <p>Évolution du modèle vu du dessus.</p>
+
+        <div class="compare-container">
+
+            <img src="dessus-avant.jpg">
+
+            <div class="compare-after">
+                <img src="dessus-apres.jpg">
+            </div>
+
+            <div class="compare-slider"></div>
+
+        </div>
+
+    </div>
+
+    <!-- COTE -->
+
+    <div class="work-block">
+
+        <h2>Côté</h2>
+
+        <p>Travaux de carrosserie et détails latéraux.</p>
+
+        <div class="compare-container">
+
+            <img src="cote-avant.jpg">
+
+            <div class="compare-after">
+                <img src="cote-apres.jpg">
+            </div>
+
+            <div class="compare-slider"></div>
+
+        </div>
+
+    </div>
+
+    <!-- ARRIERE -->
+
+    <div class="work-block">
+
+        <h2>Arrière</h2>
+
+        <p>Comparaison arrière avant / après restauration.</p>
+
+        <div class="compare-container">
+
+            <img src="arriere-avant.jpg">
+
+            <div class="compare-after">
+                <img src="arriere-apres.jpg">
+            </div>
+
+            <div class="compare-slider"></div>
+
+        </div>
+
+    </div>
+
+    <!-- INTERIEUR -->
+
+    <div class="work-block">
+
+        <h2>Intérieur</h2>
+
+        <p>Détails de l'habitacle en cours de réalisation.</p>
+
+        <div class="compare-container">
+
+            <img src="interieur-avant.jpg">
+
+            <div class="compare-after">
+                <img src="interieur-apres.jpg">
+            </div>
+
+            <div class="compare-slider"></div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+<footer>
+    © 2026 Restore Model Cars
+</footer>
+
+<script>
+
+document.querySelectorAll('.compare-container').forEach(container=>{
+
+    const after=container.querySelector('.compare-after');
+    const slider=container.querySelector('.compare-slider');
+
+    let active=false;
+
+    function move(x){
+
+        const rect=container.getBoundingClientRect();
+
+        let pos=x-rect.left;
+
+        pos=Math.max(0,Math.min(pos,rect.width));
+
+        const percent=(pos/rect.width)*100;
+
+        after.style.width=percent+"%";
+        slider.style.left=percent+"%";
+    }
+
+    slider.addEventListener('mousedown',()=>active=true);
+
+    window.addEventListener('mouseup',()=>active=false);
+
+    window.addEventListener('mousemove',(e)=>{
+        if(active) move(e.clientX);
+    });
+
+    slider.addEventListener('touchstart',()=>active=true);
+
+    window.addEventListener('touchend',()=>active=false);
+
+    window.addEventListener('touchmove',(e)=>{
+        if(active) move(e.touches[0].clientX);
+    });
+
+});
+
+</script>
+
+</body>
+</html>
+```
